@@ -13,6 +13,7 @@
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 </head>
 <body>
+    <div id="root">
 <!-- Container Web App-->
 <div class="container-webapp">
     <!-- Container App -->
@@ -34,30 +35,95 @@
                 </div>
             </div>
             <!-- User Name second div -->
-            <div class="user-name-sec">
-                <i class="fa-solid fa-bell-slash"></i>
-                <span>Ricevi notifice di nuovi messaggi</span>
-                <span class="notify">Attiva notifiche desktop</span>
-            </div>
-            <!-- User Name third div -->
-            <div class="input-text">
-                <input  class="input" type="text" placeholder="Cerca o inizia una nuova chat">
-            </div>
+        <div class="notify">
+                <div class="icon">
+                    <i class="fa fa-bell-slash"></i>
+                </div>
+
+            <div class="desktop"> 
+              <span>Ricevi notifice di nuovi messaggi</span>
+              <span>Attiva notifiche desktop</span>
+           </div> 
 
         </div>
+            <!-- User Name third div -->
+            <div class="input-text flex">
+                 <label  class="label" >
+                    <i class="fas fa-search"></i>
+                 </label>
+
+                 <input  class="input" type="text" placeholder="Cerca o inizia una nuova chat">
+             
+            </div>
+             <!-- User Name Four div -->
+        <div class="contact flex">
+            <!-- contact img -->
+            <div class="contact-img">
+                <img src="img/avatar_1.jpg" alt="avatar uno">
+            </div>
+            <!-- Contact text -->
+            <div class="contact-name">
+                <div class="name">Michele</div>
+            </div>
+        </div>
+
+        </div>
+       
         <!-- Container right -->
         <div class="container-app-right">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti ipsam tempore ad aperiam dolorem iure hic rem accusamus atque fugiat ex totam quod qui culpa, quidem porro pariatur fugit cumque!
-        Numquam amet nihil id quaerat odio illo molestias, sunt, aliquam minus iusto eaque quia, corporis tempora. Ipsa voluptates praesentium similique velit adipisci provident itaque, pariatur exercitationem repellendus. Distinctio, iusto dolore.
-        Ratione, ipsum sit labore saepe animi provident culpa vitae molestiae est omnis pariatur in sed cum nostrum fugit. Itaque beatae id eos rem illum veniam laudantium magnam officiis ad necessitatibus.
-        Numquam dicta, cum ea maxime commodi quidem praesentium nulla. Esse repudiandae similique vitae ut sunt at. At enim iusto unde libero exercitationem. Deserunt totam facere debitis dolorum incidunt modi beatae.
-        Commodi pariatur adipisci corrupti voluptatum expedita mollitia repellat dignissimos, a fugiat repellendus. Quae ratione eligendi itaque officiis provident eos delectus aliquid, perferendis culpa nemo magnam dolore, sit, cumque totam sint.
+            <div class="user-name flex">
+                <!-- User Information -->
+                <div class="user-information">
+                    <img src="img/avatar_io.jpg" alt="Avatar io photo">
+                    <span class="user-nm"> Samuele</span>
+                </div>
+                <!-- Actions -->
+                <div class="actions">
+                    <span><i class="fa-solid fa-circle-notch"></i>
+                        <i class="fa-solid fa-message"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i></span>
+                </div>
+            </div>
+
+            <!-- User Messages -->
+            <div class="message">
+                <!-- receivred message -->
+                <div class="message-received">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores culpa voluptatum alias libero officia odio reprehenderit eaque! Perspiciatis quod blanditiis ipsam sequi corporis aliquid adipisci placeat, cumque earum, totam unde.
+                    Nisi, ipsa aliquam quod officiis quia sapiente nihil reiciendis aspernatur cupiditate similique asperiores illo quae, cum libero quidem. Natus, laborum pariatur? Impedit error pariatur cum mollitia perspiciatis autem vero aliquam.
+                    
+                </div>
+                <!-- send message -->
+                <div class="message-sent">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi et esse nemo architecto placeat accusantium voluptatem voluptates totam cupiditate blanditiis. Magni eaque, facilis ipsa nisi voluptas expedita ducimus adipisci delectus?*5
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi vel nesciunt quas voluptates, ducimus magnam facere a? Reiciendis dolorem blanditiis qui ab, esse accusamus fugiat atque quaerat impedit dolor maiores!
+                </div>
+
+            </div>
+            <!-- User Write -->
+            <div class="user-write flex">
+                <div class="emoji">
+                    <a href="#"><i class="fa-regular fa-face-smile"></i></a>
+                </div>
+
+
+                <div class="input-write">
+                    <input class="input-write" type="text" placeholder="Scrivi un messaggio">
+                </div>
+
+
+                <div class="emoji-two">
+                    <a href="#"><i class="fa-solid fa-microphone"></i></a>
+                    </div>
+                </div>
+            </div>
+
 
         </div>
 
     </div>
 </div>
-    
+    </div>
     <script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>
