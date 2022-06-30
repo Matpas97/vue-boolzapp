@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VUEBOOLZAPP</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+<body>
+    <div id="root">
+<!-- Container Web App-->
+<div class="container-webapp">
+    <!-- Container App -->
+    <div class="container-app flex">
+        <!-- Container left -->
+        <div class="container-app-left">
+            <!-- User Name first div -->
+            <div class="user-name flex">
+                <!-- User Information -->
+                <div class="user-information">
+                    <img src="img/avatar_io.jpg" alt="Avatar io photo">
+                    <span class="user-nm"> Nome Utente</span>
+                </div>
+                <!-- Actions -->
+                <div class="actions">
+                    <span><i class="fa-solid fa-circle-notch"></i>
+                        <i class="fa-solid fa-message"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i></span>
+                </div>
+            </div>
+            <!-- User Name second div -->
+        <div class="notify">
+                <div class="icon">
+                    <i class="fa fa-bell-slash"></i>
+                </div>
+
+            <div class="desktop"> 
+              <span>Ricevi notifice di nuovi messaggi</span>
+              <p>Attiva notifiche desktop</p>
+           </div> 
+
+        </div>
+            <!-- User Name third div -->
+            <div class="input-text flex">
+                 <label  class="label" >
+                    <i class="fas fa-search"></i>
+                 </label>
+
+                 <input  class="input" type="text" placeholder="Cerca o inizia una nuova chat">
+             
+            </div>
+             <!-- User Name Four div -->
+        <div v-for='contact in contacts'class="contact flex">
+            <!-- contact img -->
+            <div class="contact-img">
+                <img :src='"img/avatar" + contact.avatar + ".jpg"' alt="avatar uno">
+            </div>
+            <!-- Contact text -->
+            <div class="contact-name">
+                <div class="name">{{ contact.name }}</div>
+            </div>
+        </div>
+
+        </div>
+       
+        <!-- Container right -->
+        <div class="container-app-right">
+            <div class="user-name flex">
+                <!-- User Information -->
+                <div class="user-information">
+                    <img :src="'img/avatar'+ contacts[activeContact]+ '.jpg'" alt="avatar">
+                </div>
+                <div class="nam">
+                    <span class="user-nm">{{ contacts[activeContact].name }}</span>
+                    <p>Ultimo accesso oggi alle</p>
+                </div>
+                <!-- Actions -->
+                <div class="actions">
+                    <span><i class="fa-solid fa-circle-notch"></i>
+                        <i class="fa-solid fa-message"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i></span>
+                </div>
+            </div>
+
+            <!-- User Messages -->
+            <div class="message-wrapper">
+                <!-- receivred message -->
+                <div class="message-received message">
+                    ciao
+                </div>
+                <!-- send message -->
+                <div class="message-sent message">
+                    come va ?
+                </div>
+
+            </div>
+            <!-- User Write -->
+            <div class="user-write flex">
+                <div class="emoji">
+                    <a href="#"><i class="fa-regular fa-face-smile"></i></a>
+                </div>
+
+
+                <div class="input-write">
+                    <input class="input-write" type="text" placeholder="Scrivi un messaggio">
+                </div>
+
+
+                <div class="emoji-two">
+                    <a href="#"><i class="fa-solid fa-microphone"></i></a>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+</div>
+    </div>
+    <script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,223 @@
+/* RESET */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* COMMON */
+.flex {
+    display: flex;
+}
+
+/* BODY */
+body{
+    font-family: 'Roboto', sans-serif;
+    height: 100%;
+}
+.main {
+    height: 100%;
+    height: 100vh;
+}
+
+.container-app {
+    width: 80%;
+    height: 90%;
+    margin: 0 auto;
+    background-color: white;
+    margin-top: 30px;
+    
+    
+}
+
+.container-webapp {
+    height: 100vh;
+    min-width: 950px;
+   
+}
+
+.container-app-left {
+    background-color: white;
+    width: 400px;
+    border: 1px solid lightgray;
+    height: 602px;
+    
+
+}
+
+.container-app-right {
+    
+width: calc(100% - 400px);
+border-top: 1px solid lightgray;
+border-right: 1px solid lightgray;
+
+}
+
+/* Container left */
+
+.user-name img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    padding: 5px 5px;
+    vertical-align: middle;
+    
+}
+.user-name span {
+    vertical-align: middle;
+}
+
+.user-name {
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid lightgray;
+    
+}
+
+/* icon */
+.actions i{
+    padding: 0 5px;
+    color: white;
+}
+.user-nm {
+    color: black;
+}
+.actions i {
+    color: gray;
+}
+
+.input {
+    padding: 10px 90px;
+    margin-left: 5px;
+    border: 1px solid white;
+   
+   
+
+}
+.input-text {
+    background-color: lightgray;
+    padding: 5px 5px;
+    border: 1px solid gray;
+    
+}
+.notify {
+    display: flex;
+    text-decoration: underline;
+    background-color:deepskyblue;
+    padding: 10px;
+}
+.fa-solid .fa-bell-slash {
+    font-size: 50px;
+}
+.label{
+    background-color: white;
+}
+.desktop p {
+    text-decoration: none;
+}
+.us {
+    display: block;
+}
+
+.label i {
+    padding-top: 11px;
+    font-size: 20px;
+}
+.nam p {
+    font-size: 10px;
+}
+.icon{
+    border-radius: 50%;
+    padding-left: 15px;
+
+}
+.nam{
+    padding-right: 378px;
+    
+}
+.icon i {
+    font-size: 40px;
+}
+.desktop{
+    padding-left: 20px;
+}
+.desktop span {
+    display: block;
+    margin-right: 30px;
+}
+
+.contact-img img {
+
+    width: 55px;
+    border-radius: 50%;
+    padding: 6px 6px;
+}
+.name {
+    padding-left: 10px;
+    padding-top: 6px;
+}
+.contact {
+    border-bottom: 1px solid lightgray;
+}
+.border {
+    border: 1px solid gray;
+}
+
+/* Container Right */
+.user-messages {
+   
+    background-image: url('..img/mine.jpg');
+    height: calc(100% - 125px);
+    
+}
+.message-wrapper{
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    align-items: center;
+}
+
+.message-received {
+    align-self: flex-start;
+    background-color: lightgray;
+    border-radius: 10px;
+    padding: 10px;
+    margin-left: 35px;
+    margin-top: 21px;
+}
+.message-sent {
+    align-self: flex-end;
+    background-color:#bdecb6;
+    margin-right: 32px;
+    border-radius: 10px;
+    padding: 10px;
+}
+.user-write {
+    justify-content: space-between;
+    margin-top: 389px;
+    border: 1px solid lightgray;
+    background-color: #efefef ;
+}
+.input-write {
+    padding: 0 20px;
+}
+.user-write i {
+    color: gray;
+    padding-left: 19px;
+    padding-top: 22px;
+    font-size: 20px;
+  }
+
+.input-write {
+    width: 570px;
+    padding: 10px;
+    border-radius: 10px;
+}
+.message {
+    max-width: 300px;
+}
+.emoji {
+    text-align: center;
+}
+.emoji-two i {
+    padding-right: 10px;
+}
