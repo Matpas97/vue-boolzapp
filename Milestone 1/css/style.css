@@ -32,11 +32,14 @@ body{
 .container-webapp {
     height: 100vh;
     min-width: 950px;
+   
 }
 
 .container-app-left {
-    background-color: brown;
+    background-color: white;
     width: 400px;
+    border: 1px solid lightgray;
+    height: 602px;
     
 
 }
@@ -44,6 +47,8 @@ body{
 .container-app-right {
     
 width: calc(100% - 400px);
+border-top: 1px solid lightgray;
+border-right: 1px solid lightgray;
 
 }
 
@@ -64,9 +69,7 @@ width: calc(100% - 400px);
 .user-name {
     align-items: center;
     justify-content: space-between;
-    
-}
-.user-information {
+    border-bottom: 1px solid lightgray;
     
 }
 
@@ -91,7 +94,7 @@ width: calc(100% - 400px);
 
 }
 .input-text {
-    background-color: white;
+    background-color: lightgray;
     padding: 5px 5px;
     border: 1px solid gray;
     
@@ -99,6 +102,8 @@ width: calc(100% - 400px);
 .notify {
     display: flex;
     text-decoration: underline;
+    background-color:deepskyblue;
+    padding: 10px;
 }
 .fa-solid .fa-bell-slash {
     font-size: 50px;
@@ -106,16 +111,38 @@ width: calc(100% - 400px);
 .label{
     background-color: white;
 }
+.desktop p {
+    text-decoration: none;
+}
+.us {
+    display: block;
+}
 
 .label i {
     padding-top: 11px;
     font-size: 20px;
 }
+.nam p {
+    font-size: 10px;
+}
+.icon{
+    border-radius: 50%;
+    padding-left: 15px;
+
+}
+.nam{
+    padding-right: 378px;
+    
+}
 .icon i {
-    font-size: 30px;
+    font-size: 40px;
+}
+.desktop{
+    padding-left: 20px;
 }
 .desktop span {
     display: block;
+    margin-right: 30px;
 }
 
 .contact-img img {
@@ -142,7 +169,7 @@ width: calc(100% - 400px);
     height: calc(100% - 125px);
     
 }
-.message {
+.message-wrapper{
     display: flex;
     flex-grow: 1;
     flex-direction: column;
@@ -151,23 +178,46 @@ width: calc(100% - 400px);
 
 .message-received {
     align-self: flex-start;
-    background-color: tan;
+    background-color: lightgray;
+    border-radius: 10px;
+    padding: 10px;
+    margin-left: 35px;
+    margin-top: 21px;
 }
 .message-sent {
     align-self: flex-end;
-    background-color: orange;
+    background-color:#bdecb6;
+    margin-right: 32px;
+    border-radius: 10px;
+    padding: 10px;
 }
 .user-write {
-    margin-top: 280px;
     justify-content: space-between;
+    margin-top: 389px;
+    border: 1px solid lightgray;
+    background-color: #efefef ;
 }
 .input-write {
     padding: 0 20px;
 }
 .user-write i {
     color: gray;
-}
+    padding-left: 19px;
+    padding-top: 22px;
+    font-size: 20px;
+  }
+
 .input-write {
-    width: 603px;
-    
+    width: 570px;
+    padding: 10px;
+    border-radius: 10px;
+}
+.message {
+    max-width: 300px;
+}
+.emoji {
+    text-align: center;
+}
+.emoji-two i {
+    padding-right: 10px;
 }

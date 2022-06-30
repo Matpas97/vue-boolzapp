@@ -42,7 +42,7 @@
 
             <div class="desktop"> 
               <span>Ricevi notifice di nuovi messaggi</span>
-              <span>Attiva notifiche desktop</span>
+              <p>Attiva notifiche desktop</p>
            </div> 
 
         </div>
@@ -56,14 +56,14 @@
              
             </div>
              <!-- User Name Four div -->
-        <div class="contact flex">
+        <div v-for='contact in contacts'class="contact flex">
             <!-- contact img -->
             <div class="contact-img">
-                <img src="img/avatar_1.jpg" alt="avatar uno">
+                <img :src='"img/avatar" + contact.avatar + ".jpg"' alt="avatar uno">
             </div>
             <!-- Contact text -->
             <div class="contact-name">
-                <div class="name">Michele</div>
+                <div class="name">{{ contact.name }}</div>
             </div>
         </div>
 
@@ -74,8 +74,11 @@
             <div class="user-name flex">
                 <!-- User Information -->
                 <div class="user-information">
-                    <img src="img/avatar_io.jpg" alt="Avatar io photo">
-                    <span class="user-nm"> Samuele</span>
+                    <img :src="'img/avatar' + contacts[activeContact].avatar + '.jpg'" alt="avatar_1">
+                </div>
+                <div class="nam">
+                    <span class="user-nm">{{ contacts[activeContact].name }}></span>
+                    <p>Ultimo accesso oggi alle</p>
                 </div>
                 <!-- Actions -->
                 <div class="actions">
@@ -86,19 +89,21 @@
             </div>
 
             <!-- User Messages -->
-            <div class="message">
+            <div  class="message-wrapper">
+               
+               
+               
+
                 <!-- receivred message -->
-                <div class="message-received">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores culpa voluptatum alias libero officia odio reprehenderit eaque! Perspiciatis quod blanditiis ipsam sequi corporis aliquid adipisci placeat, cumque earum, totam unde.
-                    Nisi, ipsa aliquam quod officiis quia sapiente nihil reiciendis aspernatur cupiditate similique asperiores illo quae, cum libero quidem. Natus, laborum pariatur? Impedit error pariatur cum mollitia perspiciatis autem vero aliquam.
-                    
+                <div class="message-received message">
+                    ciao
                 </div>
                 <!-- send message -->
-                <div class="message-sent">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi et esse nemo architecto placeat accusantium voluptatem voluptates totam cupiditate blanditiis. Magni eaque, facilis ipsa nisi voluptas expedita ducimus adipisci delectus?*5
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi vel nesciunt quas voluptates, ducimus magnam facere a? Reiciendis dolorem blanditiis qui ab, esse accusamus fugiat atque quaerat impedit dolor maiores!
+                <div class="message-sent message">
+                    come va ?
                 </div>
 
+              
             </div>
             <!-- User Write -->
             <div class="user-write flex">
