@@ -19,11 +19,10 @@
     width: 75%;
     height: 815px;
     display: flex;
-    
 }
 .container-app-left {
     width: 450px;
-    overflow: scroll;
+    overflow-y: visible;
 }
 .container-app-right{
     background-color: white;
@@ -46,6 +45,7 @@
     justify-content: space-between;
     align-items: center;
     border: 1px solid lightgray;
+    background-color: #f3eeea;
 }
  span i{
     font-size: 22px;
@@ -99,6 +99,9 @@ input {
     list-style: none;
     border: 1px solid lightgray;
 }
+.contact-area {
+    overflow-y: scroll;
+}
  .user-info {
     display: flex;
     width: 200px;
@@ -116,6 +119,7 @@ input {
     justify-content: space-between;
     border-bottom: 1px solid lightgray;
     height: 67px;
+    background-color: #f3eeea;
 
  }
  .user-action {
@@ -137,6 +141,7 @@ input {
     height: calc( 100% - 140px );
     background-image: url(../img/mine.jpg);
     overflow: scroll;
+    flex-grow: 1;
  }
  .chat-input {
     width: 100%;
@@ -166,4 +171,21 @@ input {
 }
 .vocal-message i {
     color: gray;
+}
+.animation {
+    background-color:#f3eeea;
+}
+.message-sent {
+    padding: 10px 10px;
+    background-color: #8fbc8f ;
+    border-radius: 50px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+.message-received {
+    padding: 10px 10px;
+    background-color: white;
+    border-radius: 50px;
+    margin-top: 10px;
+
 }

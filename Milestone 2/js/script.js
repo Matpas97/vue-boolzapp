@@ -24,7 +24,7 @@ const app = new Vue({
             },
             {
               date: "10/01/2020 16:15:22",
-              message: "Tutto fatto!",
+              message3: "Tutto fatto!",
               status: "received",
             },
           ],
@@ -41,7 +41,7 @@ const app = new Vue({
             },
             {
               date: "20/03/2020 16:30:55",
-              message: "Bene grazie! Stasera ci vediamo?",
+              message3: "Bene grazie! Stasera ci vediamo?",
               status: "received",
             },
             {
@@ -63,7 +63,7 @@ const app = new Vue({
             },
             {
               date: "28/03/2020 10:20:10",
-              message: "Sicuro di non aver sbagliato chat?",
+              message3: "Sicuro di non aver sbagliato chat?",
               status: "sent",
             },
             {
@@ -85,7 +85,7 @@ const app = new Vue({
             },
             {
               date: "10/01/2020 15:50:00",
-              message: "Si, ma preferirei andare al cinema",
+              message3: "Si, ma preferirei andare al cinema",
               status: "received",
             },
           ],
@@ -102,7 +102,7 @@ const app = new Vue({
             },
             {
               date: "10/01/2020 15:50:00",
-              message: "Va bene, stasera la sento",
+              message3: "Va bene, stasera la sento",
               status: "received",
             },
           ],
@@ -112,17 +112,17 @@ const app = new Vue({
           avatar: "_6",
           visible: true,
           messages: [
-            {
+          {
               date: "10/01/2020 15:30:55",
               message: "Ciao Claudia, hai novità?",
               status: "sent",
             },
             {
               date: "10/01/2020 15:50:00",
-              message: "Non ancora",
+              message3: "Non ancora",
               status: "received",
             },
-            {
+           {
               date: "10/01/2020 15:51:00",
               message: "Nessuna nuova, buona nuova",
               status: "sent",
@@ -141,7 +141,7 @@ const app = new Vue({
             },
             {
               date: "10/01/2020 15:50:00",
-              message: "Grazie per avermelo ricordato, le scrivo subito!",
+              message3: "Grazie per avermelo ricordato, le scrivo subito!",
               status: "received",
             },
           ],
@@ -158,7 +158,7 @@ const app = new Vue({
             },
             {
               date: "10/01/2020 15:50:00",
-              message: "No, l'ho già mangiata ieri, ordiniamo sushi!",
+              message3: "No, l'ho già mangiata ieri, ordiniamo sushi!",
               status: "sent",
             },
             {
@@ -171,11 +171,9 @@ const app = new Vue({
       ],
     },
     methods: {
-     tapToClick(){
-       
-  
+      tapToClick(index){
+        this.active = index;
       }
     }
-   
   });
   

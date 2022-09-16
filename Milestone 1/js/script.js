@@ -5,6 +5,7 @@
 const app = new Vue({
   el: "#root",
   data: {
+    active:0,
     contacts: [
       {
         name: "Michele",

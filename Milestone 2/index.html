@@ -56,9 +56,11 @@
                  <!-- Contact Area -->
             <div class="contact-area">
                 <ul>
-                    <li  v-for="(contact,index) in contacts">  <img :src="'img/avatar' + contact.avatar + '.jpg'" alt="" :class="{greeen}"
-                        class="contact"
-                        @click="tapToClick()" >
+                    <li  v-for="(contact,index) in contacts" 
+                    :class=" { animation: index === active}"
+                    @click="tapToClick(index)">  
+                    <img :src="'img/avatar' + contact.avatar + '.jpg'" alt="" >
+                      
                         {{ contact.name }}
                        
                     </li>
@@ -75,11 +77,13 @@
                     <div class="user-info">
                         <!-- Immagine Avatar -->
                         <div class="user-im">
-                            <img src="img/avatar_1.jpg" alt=" Avatar Uno">
+                            <img :src="'img/avatar' + contacts[active].avatar + '.jpg' " 
+                            :alt=" contacts[active].name">
+                            
                         </div>
                         <!-- Nome e Accesso-->
                         <div class="name">
-                            <span>Michele</span>
+                            {{ contacts[active].name }}
                             <p>Ultimo accesso oggi alle 12:00</p>
                         </div>
                         
@@ -94,6 +98,17 @@
 
                 <!-- Chat Central -->
                 <div class="central-chat">
+                    <!-- Message Sent -->
+                    <div v-for="message in contacts[active].messages" class="message-sent"> 
+                    {{ message.message }}
+                    
+                    </div>
+                    
+                    <!-- Message Received -->
+                    <div v-for="message in contacts[active].messages" class="message-received">
+                        {{ message.message }}
+
+                    </div>
 
                 </div>
 
