@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/solid.min.css" integrity="sha512-uj2QCZdpo8PSbRGL/g5mXek6HM/APd7k/B5Hx/rkVFPNOxAQMXD+t+bG4Zv8OAdUpydZTU3UHmyjjiHv2Ww0PA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+    <title>VUE-BOOLZAPP</title>
+</head>
+<body>
+<div id="root">
+    <!-- Container Web App --> 
+    <div class="container-webapp">
+        
+
+        <!-- Container App -->
+        <div class="container-app">
+            <!-- Container left -->
+            <div class="container-app-left">
+                <!-- User Information -->
+                <div class="user-information">
+                    <!-- User Image -->
+                    <div class="user-img">
+                        <img src="img/avatar_io.jpg" alt="Avatar Mine">
+                            <span class="name">Sofia</span>
+                    </div>
+                    
+                 <!-- Actions -->
+                   <div class="actions">
+                    <span><a href="#"><i class="fa-solid fa-circle-notch"></i></a>
+                        <a href="#"><i class="fa-solid fa-message"></i></a>
+                        <a href="#"><i class="fa-solid fa-ellipsis-vertical"></i></a></span>
+                    </div>
+                    
+                   </div>
+                   <!-- Notify -->
+                <div class="notify">
+                    <div class="div-notify">
+                       <a href="#"><i class="fa fa-bell-slash"></i></a> 
+                    </div>
+
+                    <div class="text-div">
+                        <div class="new">Ricevi notifiche di nuovi messaggi</div>
+                        <div class="change">Attiva notifiche desktop</div>
+                    </div>
+                </div>
+                <!-- Input Area -->
+                <div class="input-area">
+                    <input type="text" placeholder=" Cerca o inizia una nuova chat">
+                </div>
+                 <!-- Contact Area -->
+            <div class="contact-area">
+                <ul>
+                    <li  v-for="(contact,index) in contacts">  <img :src="'img/avatar' + contact.avatar + '.jpg'" alt="" :class="{greeen}"
+                        class="contact"
+                        @click="tapToClick()" >
+                        {{ contact.name }}
+                       
+                    </li>
+                    
+                </ul>
+           </div>
+
+            </div>
+           
+            <!-- Container App Right -->
+            <div class="container-app-right">
+                <!-- User information Right -->
+                <div class="user-information-right">
+                    <div class="user-info">
+                        <!-- Immagine Avatar -->
+                        <div class="user-im">
+                            <img src="img/avatar_1.jpg" alt=" Avatar Uno">
+                        </div>
+                        <!-- Nome e Accesso-->
+                        <div class="name">
+                            <span>Michele</span>
+                            <p>Ultimo accesso oggi alle 12:00</p>
+                        </div>
+                        
+                    </div>
+                    <!-- User Action -->
+                    <div class="user-action">
+                        <div><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></div>
+                        <div><a href="#"><i class="fa-solid fa-paperclip"></i></a></div>
+                        <div><a href="#"><i class="fa-solid fa-ellipsis-vertical"></i></a></div>
+                    </div>
+                </div>
+
+                <!-- Chat Central -->
+                <div class="central-chat">
+
+                </div>
+
+
+                <!-- Area Bottom -->
+               <div class="area-bottom">
+
+                     
+             <div class="chat-input">
+
+                     <!-- Emoji Area -->
+                 <div class="emoji">
+                    <a href="#"><i class="fa-regular fa-face-smile"></i></a>
+                 </div>
+                    <!-- Chat Input -->
+
+                    <input type="text" placeholder="Scrivi un messaggio">
+
+                    <!-- Vocal Messages -->
+                 <div class="vocal-message">
+                    <a href="#"><i class="fa-solid fa-microphone"></i></a>
+                 </div>
+             </div>
+                
+
+                 
+
+              </div>
+
+               
+               
+              
+                
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+</div>
+    <script src="js/script.js"></script>
+</body>
+</html>
