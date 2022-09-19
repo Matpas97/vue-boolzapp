@@ -195,20 +195,33 @@ const app = new Vue({
       sendMessage(){ 
         console.log(this.newMexText)
         const selectedContact = this.contacts[this.active];
-        selectedContact.messages.push([
+         selectedContact.messages.push(
           {
             date:this.getNow(),
             message:this.newMexText,
             status: "sent",
           },
-        ],);
-      }, 
+        );
+        this.newMexText = "";
+
+        setTimeout(()=>{ selectedContact.messages.push(
+          {
+            date:this.getNow(),
+            message:'Ok!',
+            status: "received",
+          },
+        );},2000)
+
+
+    
+      },
+      
       getNow(){
         const now = new Date();
 
         const hours = this.formatDate(now.getHours());
         const minutes = this.formatDate(now.getMinutes());
-        const seconds = this.formatDate(now.getSeconds());
+        
         const day = this.formatDate(now.getDay());
         const month = this.formatDate(now.getMonth()+ 1);
         const year = now.getFullYear();
