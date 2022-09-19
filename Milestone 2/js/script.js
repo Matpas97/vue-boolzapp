@@ -6,6 +6,7 @@ const app = new Vue({
     el: "#root",
     data: {
       active:0,
+      newMexText:'',
       contacts: [
         {
           name: "Michele",
@@ -24,7 +25,7 @@ const app = new Vue({
             },
             {
               date: "10/01/2020 16:15:22",
-              message3: "Tutto fatto!",
+              message: "Tutto fatto!",
               status: "received",
             },
           ],
@@ -41,7 +42,7 @@ const app = new Vue({
             },
             {
               date: "20/03/2020 16:30:55",
-              message3: "Bene grazie! Stasera ci vediamo?",
+              message: "Bene grazie! Stasera ci vediamo?",
               status: "received",
             },
             {
@@ -63,7 +64,7 @@ const app = new Vue({
             },
             {
               date: "28/03/2020 10:20:10",
-              message3: "Sicuro di non aver sbagliato chat?",
+              message: "Sicuro di non aver sbagliato chat?",
               status: "sent",
             },
             {
@@ -85,7 +86,7 @@ const app = new Vue({
             },
             {
               date: "10/01/2020 15:50:00",
-              message3: "Si, ma preferirei andare al cinema",
+              message: "Si, ma preferirei andare al cinema",
               status: "received",
             },
           ],
@@ -102,7 +103,7 @@ const app = new Vue({
             },
             {
               date: "10/01/2020 15:50:00",
-              message3: "Va bene, stasera la sento",
+              message: "Va bene, stasera la sento",
               status: "received",
             },
           ],
@@ -119,7 +120,7 @@ const app = new Vue({
             },
             {
               date: "10/01/2020 15:50:00",
-              message3: "Non ancora",
+              message: "Non ancora",
               status: "received",
             },
            {
@@ -141,7 +142,7 @@ const app = new Vue({
             },
             {
               date: "10/01/2020 15:50:00",
-              message3: "Grazie per avermelo ricordato, le scrivo subito!",
+              message: "Grazie per avermelo ricordato, le scrivo subito!",
               status: "received",
             },
           ],
@@ -158,7 +159,7 @@ const app = new Vue({
             },
             {
               date: "10/01/2020 15:50:00",
-              message3: "No, l'ho già mangiata ieri, ordiniamo sushi!",
+              message: "No, l'ho già mangiata ieri, ordiniamo sushi!",
               status: "sent",
             },
             {
@@ -170,10 +171,60 @@ const app = new Vue({
         },
       ],
     },
+
     methods: {
+
       tapToClick(index){
         this.active = index;
+
+        const adesso = new Date();
+      },
+
+    //  getHoursMinutes(dateToFormat){
+     //   const dateToFormat = this.contacts[index].messages[0].date;
+      // const array = dateToFormat.split(" "); // ["10/01/2020",  "15:30:55"]
+      //  const ora = array[1]; // "15:30:55"
+      //  const arrayOra = ora.split(":"); // ["15", "30", "55"]
+     //   const oreMinuti = arrayOra[0] + ":" + arrayOra[1]; // "15:30"
+    //    console.log(oreMinuti);
+  
+     //   const adesso = new Date();
+   //     console.log(adesso.getHours() + ":" + adesso.getMinutes());
+      // },
+
+      sendMessage(){ 
+        console.log(this.newMexText)
+        const selectedContact = this.contacts[this.active];
+        selectedContact.messages.push([
+          {
+            date:this.getNow(),
+            message:this.newMexText,
+            status: "sent",
+          },
+        ],);
+      }, 
+      getNow(){
+        const now = new Date();
+
+        const hours = this.formatDate(now.getHours());
+        const minutes = this.formatDate(now.getMinutes());
+        const seconds = this.formatDate(now.getSeconds());
+        const day = this.formatDate(now.getDay());
+        const month = this.formatDate(now.getMonth()+ 1);
+        const year = now.getFullYear();
+        return `${day}/${month}/${year}/${hours}:${minutes}:${seconds}`;
+        
+
+
+
+      },
+      
+      formatDate (datePart){
+        return datePart < 10 ? '0' + datePart : datePart;
+
       }
-    }
+      
+    },
   });
+  
   
