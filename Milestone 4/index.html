@@ -51,12 +51,13 @@
                 </div>
                 <!-- Input Area -->
                 <div class="input-area">
-                    <input type="text" placeholder=" Cerca o inizia una nuova chat">
+                    <input type="text" placeholder=" Cerca o inizia una nuova chat" @keyup="searchUser" v-model="searchTextUser" >
                 </div>
                  <!-- Contact Area -->
             <div class="contact-area">
-                <ul>
-                    <li  v-for="(contact,index) in contacts" 
+                <ul v-for="(contact,index) in contacts" >
+                    <li  
+                    v-if="contact.visible"
                     :class=" { animation: index === active}"
                     @click="tapToClick(index)">  
                     <img :src="'img/avatar' + contact.avatar + '.jpg'" alt="" >

@@ -8,6 +8,7 @@ const app = new Vue({
     data: {
       active:0,
       newMexText:'',
+      searchTextUser:'',
       contacts: [
         {
           name: "Michele",
@@ -216,6 +217,7 @@ const app = new Vue({
         this.newMexText = ''; 
       },
       
+      
       getNow(){
         const now = new Date();
 
@@ -235,7 +237,24 @@ const app = new Vue({
       formatDate (datePart){
         return datePart < 10 ? '0' + datePart : datePart;
 
-      }
+      },
+
+     searchUser() {
+      
+      this.contacts.forEach((item, index) => {
+        console.log(item.name.toLowerCase());
+        console.log(this.searchTextUser.toLowerCase());
+      
+        if(item.name.toLowerCase().includes(this.searchTextUser.toLowerCase())) {
+          item.visible = true;
+        } 
+       else{
+        item.visible = false;
+       }
+          
+        
+      });
+    }
       
     },
   });
